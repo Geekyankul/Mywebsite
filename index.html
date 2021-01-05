@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js example</title>
+
+    <style>
+        input.btn{
+            padding:10px;
+            margin: 2px;
+            color:aqua;
+            font-weight:bold;
+            font-size: 20px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color: rgb(0, 0, 120);
+        }
+              
+
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" id="num" name="num">
+            <input type="button" class="btn" value="click" onclick="msg()">
+        </form>
+    </div>
+    <div id="data"></div>
+    <script>
+            var txtdata=document.getElementById("num");
+            var dataid=document.getElementById("data");
+            let mylist=[];
+            function msg(e){
+                if(txtdata.value!=null)
+                    mylist.push(txtdata.value);
+                    for(let i in mylist){
+                        dataid.append("<p>"+ mylist[i] +"</p>");
+                    }
+                    txtdata.value="";
+            }
+    </script>
+    
+    <!-- <script>
+            document.write("<h1>javascript</h1>");
+            function msg(){
+                alert("hello world");
+            }
+    </script>
+    <script src="./main.js"></script>
+
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>Last name</th>
+                    <th>Roll no.</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ankul</td>
+                    <td>kashyap</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ansh</td>
+                    <td>kashyap</td>
+                    <td>13</td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </div>
+     -->
+</body>
+</html> 
